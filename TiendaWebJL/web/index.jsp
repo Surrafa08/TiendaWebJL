@@ -10,6 +10,8 @@
     <p>Proyecto de control de producción agrícola</p>
 
     <p><a href="Controlador">Ir al Servlet</a></p>
+    <a href="Controlador?accion=listar">Ver lista de huertos</a>
+
 
     <hr>
 

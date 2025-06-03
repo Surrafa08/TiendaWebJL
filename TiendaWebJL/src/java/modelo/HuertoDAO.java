@@ -1,8 +1,8 @@
 package modelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import util.Conexion;
 
 public class HuertoDAO {
@@ -30,5 +30,28 @@ public class HuertoDAO {
         }
 
         return registrado;
+    }
+
+    public List<Huerto> listarHuertos() {
+        List<Huerto> lista = new ArrayList<>();
+        String sql = "SELECT * FROM huertos";
+
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                Huerto h = new Huerto();
+                h.setId(rs.getInt("id"));
+                h.setNombre(rs.getString("nombre"));
+                h.setUbicacion(rs.getString("ubicacion"));
+                lista.add(h);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return lista;
     }
 }

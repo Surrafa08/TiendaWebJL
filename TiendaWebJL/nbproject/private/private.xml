@@ -5,7 +5,12 @@
         <group>
             <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/src/java/controlador/Controlador.java</file>
             <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/web/index.jsp</file>
+            <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/src/java/modelo/HuertoDAO.java</file>
+            <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/web/listarHuertos.jsp</file>
+            <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/web/huertos/registrarHuerto.jsp</file>
+            <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/src/java/modelo/Huerto.java</file>
             <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/web/mostrarDatos.jsp</file>
+            <file>file:/C:/Users/jaide/OneDrive/Documentos/NetBeansProjects/TiendaWebJL/src/java/util/Conexion.java</file>
         </group>
     </open-files>
 </project-private>

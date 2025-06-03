@@ -7,6 +7,7 @@ import modelo.Huerto;
 import modelo.HuertoDAO;
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "Controlador", urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet {
@@ -31,5 +32,24 @@ public class Controlador extends HttpServlet {
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("registroHuerto.jsp");
         dispatcher.forward(request, response);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String accion = request.getParameter("accion");
+
+        if ("listar".equals(accion)) {
+            HuertoDAO dao = new HuertoDAO();
+            List<Huerto> lista = dao.listarHuertos();
+            request.setAttribute("listaHuertos", lista);
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("listarHuertos.jsp");
+            dispatcher.forward(request, response);
+        } else {
+            // Si no hay acción o es desconocida, redirigir al inicio
+            response.sendRedirect("index.jsp");
+        }
     }
 }
