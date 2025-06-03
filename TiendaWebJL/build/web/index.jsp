@@ -9,12 +9,10 @@
     <h1>Bienvenido a TiendaWebJL</h1>
     <p>Proyecto de control de producción agrícola</p>
 
-    <!-- Enlace simple para probar navegación con GET -->
     <p><a href="Controlador">Ir al Servlet</a></p>
 
     <hr>
 
-    <!-- Formulario para enviar datos al servlet con POST -->
     <h2>Formulario de Registro de Producto</h2>
     <form action="Controlador" method="post">
         <label for="nombre">Ingrese su nombre:</label><br>
