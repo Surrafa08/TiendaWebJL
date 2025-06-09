@@ -16,8 +16,8 @@ public class Controlador extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String nombre = request.getParameter("nombre");
-        String ubicacion = request.getParameter("ubicacion");
+        String nombre = request.getParameter("nombreHuerto");
+        String ubicacion = request.getParameter("ubicacionHuerto");
 
         Huerto huerto = new Huerto(nombre, ubicacion);
 
@@ -30,7 +30,7 @@ public class Controlador extends HttpServlet {
             request.setAttribute("mensaje", "Error al registrar el huerto");
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("registroHuerto.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("huertos/registrarHuerto.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -48,7 +48,6 @@ public class Controlador extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("listarHuertos.jsp");
             dispatcher.forward(request, response);
         } else {
-            // Si no hay acción o es desconocida, redirigir al inicio
             response.sendRedirect("index.jsp");
         }
     }

@@ -12,6 +12,12 @@ public class HuertoDAO {
 
         try {
             Connection conn = Conexion.getConnection();
+
+            if (conn == null) {
+                System.out.println("❌ ERROR: La conexión es null.");
+                return false;
+            }
+
             String sql = "INSERT INTO huertos (nombre, ubicacion) VALUES (?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, huerto.getNombre());
@@ -26,6 +32,7 @@ public class HuertoDAO {
             conn.close();
 
         } catch (SQLException e) {
+            System.out.println("❌ Error al insertar huerto: " + e.getMessage());
             e.printStackTrace();
         }
 

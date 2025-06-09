@@ -1,6 +1,7 @@
 package modelo;
 
 public class Huerto {
+    private int id;
     private String nombre;
     private String ubicacion;
 
@@ -10,6 +11,14 @@ public class Huerto {
     public Huerto(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -26,9 +35,5 @@ public class Huerto {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
-    }
-
-    void setId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

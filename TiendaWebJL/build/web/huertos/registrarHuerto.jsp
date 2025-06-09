@@ -7,10 +7,10 @@
     <h2>Registrar Huerto</h2>
     
     <% if (request.getAttribute("mensaje") != null) { %>
-    <p style="color:green;"><%= request.getAttribute("mensaje") %></p>
+        <p style="color:green;"><%= request.getAttribute("mensaje") %></p>
     <% } %>
 
-    <form action="../Controlador" method="post">
+    <form action="${pageContext.request.contextPath}/Controlador" method="post">
         <input type="hidden" name="accion" value="registrarHuerto" />
 
         <label>Nombre del Huerto:</label><br/>
@@ -23,6 +23,6 @@
     </form>
 
     <br/>
-    <a href="../index.jsp">Volver al inicio</a>
+    <a href="${pageContext.request.contextPath}/index.jsp">Volver al inicio</a>
 </body>
 </html>
