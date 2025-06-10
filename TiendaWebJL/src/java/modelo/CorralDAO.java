@@ -14,7 +14,7 @@ public class CorralDAO {
         try {
             Connection conn = Conexion.getConnection();
             if (conn == null) {
-                System.out.println("❌ Conexión es null");
+                System.out.println("Conexión es null");
                 return false;
             }
 
@@ -30,13 +30,13 @@ public class CorralDAO {
             conn.close();
 
         } catch (SQLException e) {
-            System.out.println("❌ Error SQL: " + e.getMessage());
+            System.out.println("Error SQL: " + e.getMessage());
         }
 
         return registrado;
     }
 
     public List<Corral> listarCorrales() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

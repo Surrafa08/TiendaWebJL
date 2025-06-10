@@ -14,7 +14,7 @@ public class HuertoDAO {
             Connection conn = Conexion.getConnection();
 
             if (conn == null) {
-                System.out.println("❌ ERROR: La conexión es null.");
+                System.out.println("ERROR: La conexión es null.");
                 return false;
             }
 
@@ -32,7 +32,7 @@ public class HuertoDAO {
             conn.close();
 
         } catch (SQLException e) {
-            System.out.println("❌ Error al insertar huerto: " + e.getMessage());
+            System.out.println("Error al insertar huerto: " + e.getMessage());
             e.printStackTrace();
         }
 

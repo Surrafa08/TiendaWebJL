@@ -29,9 +29,9 @@ public class ControladorCorral extends HttpServlet {
             boolean registrado = dao.insertarCorral(corral);
 
             if (registrado) {
-                request.setAttribute("mensaje", "✅ Corral registrado con éxito.");
+                request.setAttribute("mensaje", "Corral registrado con éxito.");
             } else {
-                request.setAttribute("mensaje", "❌ Error al registrar el corral.");
+                request.setAttribute("mensaje", "Error al registrar el corral.");
             }
 
             RequestDispatcher dispatcher = request.getRequestDispatcher("corrales/registrarCorral.jsp");
