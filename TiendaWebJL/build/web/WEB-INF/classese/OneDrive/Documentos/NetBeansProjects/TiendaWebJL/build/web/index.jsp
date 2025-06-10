@@ -9,8 +9,10 @@
     <h1>Bienvenido a TiendaWebJL</h1>
     <p>Proyecto de control de producción agrícola</p>
 
-    <p><a href="Controlador">Ir al Servlet</a></p>
-    <a href="Controlador?accion=listar">Ver lista de huertos</a>
+    <p><a href="corrales/registrarCorral.jsp">Registrar un corral</a></p>
+    <p><a href="corrales/listarCorrales.jsp">Ver lista de corrales</a></p>
+    <p><a href="Controlador?accion=listar">Ver lista de huertos</a></p>
+
 
 
     <hr>
